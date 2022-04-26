@@ -9,6 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private var isFinishedTypingNumber = true
+    
+    private var displayValue: Double {
+        get {
+            guard let number = Double(subView.textField.text!) else {
+                return 0
+            }
+            return number
+        }
+        set {
+            subView.textField.text = String(newValue)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,9 +48,33 @@ class ViewController: UIViewController {
     
     @objc func numberPressed(_ sender: UIButton) {
         
+        if let newValue = sender.currentTitle {
+            if isFinishedTypingNumber {
+                subView.textField.text = newValue
+                isFinishedTypingNumber = false
+            } else {
+                if newValue == "." {
+                    guard !subView.textField.text!.contains(".") else {
+                        
+                        return
+                    }
+                }
+                subView.textField.text = subView.textField.text! + newValue
+            }
+        }
+        
     }
     
     @objc func calcPressed(_ sender: UIButton) {
+        isFinishedTypingNumber = true
+        
+        if let calcMethod = sender.currentTitle {
+            let calculator = CalculatorLogic(number: displayValue)
+            guard let result = calculator.calculate(symbol: calcMethod) else {
+                fatalError("The result of the calculation is nil.")
+            }
+            displayValue = result
+        }
         
     }
     

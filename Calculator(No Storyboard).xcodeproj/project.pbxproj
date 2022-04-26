@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1E7F29281851CA006A7AB7 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E7F28281851CA006A7AB7 /* CalculatorLogic.swift */; };
 		1ABE91292812FDE00033C423 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE91282812FDE00033C423 /* AppDelegate.swift */; };
 		1ABE912D2812FDE00033C423 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE912C2812FDE00033C423 /* ViewController.swift */; };
 		1ABE91322812FDE20033C423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE91312812FDE20033C423 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1E7F28281851CA006A7AB7 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 		1ABE91252812FDE00033C423 /* Calculator(No Storyboard).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator(No Storyboard).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABE91282812FDE00033C423 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABE912C2812FDE00033C423 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1E7F2A281851CF006A7AB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E7F28281851CA006A7AB7 /* CalculatorLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1ABE911C2812FDE00033C423 = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				1ABE91282812FDE00033C423 /* AppDelegate.swift */,
+				1A1E7F2A281851CF006A7AB7 /* Model */,
 				1ABE913E2816ACB50033C423 /* View */,
+				1ABE91412816C26E0033C423 /* Controller */,
 				1ABE91312812FDE20033C423 /* Assets.xcassets */,
 				1ABE91332812FDE20033C423 /* LaunchScreen.storyboard */,
 				1ABE91362812FDE20033C423 /* Info.plist */,
@@ -70,7 +82,6 @@
 			children = (
 				1ABE91422816C2A80033C423 /* SubView.swift */,
 				1ABE913F2816BC770033C423 /* HorizontalStackView.swift */,
-				1ABE91412816C26E0033C423 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 			files = (
 				1ABE912D2812FDE00033C423 /* ViewController.swift in Sources */,
 				1ABE91292812FDE00033C423 /* AppDelegate.swift in Sources */,
+				1A1E7F29281851CA006A7AB7 /* CalculatorLogic.swift in Sources */,
 				1ABE91432816C2A80033C423 /* SubView.swift in Sources */,
 				1ABE91402816BC770033C423 /* HorizontalStackView.swift in Sources */,
 			);

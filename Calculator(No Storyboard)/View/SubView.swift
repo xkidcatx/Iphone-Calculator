@@ -117,8 +117,8 @@ class SubView: UIView {
         return $0
     }(UIButton(type: .system))
     
-    private lazy var buttonComma: UIButton = {
-        $0.setTitle(",", for: .normal)
+    private lazy var buttonDot: UIButton = {
+        $0.setTitle(".", for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .darkGray
@@ -213,7 +213,7 @@ class SubView: UIView {
     lazy var textField: UITextField = {
         $0.text = "0"
         $0.textColor = .white
-        $0.font = .systemFont(ofSize: 90)
+        $0.font = UIFont.systemFont(ofSize: 90, weight: UIFont.Weight.thin)
         $0.minimumFontSize = 60
         $0.textAlignment = .right
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -232,7 +232,7 @@ class SubView: UIView {
     //MARK: - Setup Stacks
     
     private lazy var stackDotEqual: HorizontalStack = {
-        $0.addArrangedSubview(buttonComma)
+        $0.addArrangedSubview(buttonDot)
         $0.addArrangedSubview(buttonEqual)
         return $0
     }(HorizontalStack())
@@ -340,7 +340,7 @@ class SubView: UIView {
         buttonsNumbers.append(button7)
         buttonsNumbers.append(button8)
         buttonsNumbers.append(button9)
-        buttonsNumbers.append(buttonComma)
+        buttonsNumbers.append(buttonDot)
     }
     
     func addCalcButtons() {
