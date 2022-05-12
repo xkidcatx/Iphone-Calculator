@@ -14,199 +14,106 @@ class SubView: UIView {
     
     //MARK: - Setup Buttons
     
-    private lazy var button0: UIButton = {
-        $0.setTitle("0", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        $0.contentHorizontalAlignment = .left
-        $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 0)
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button0: Button = {
+        let b = Button(titleText: "0", colorBack: .darkGray, type: .system)
+        b.contentHorizontalAlignment = .left
+        b.contentEdgeInsets = UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 0)
+        return b
+    }()
     
     
-    private lazy var button1: UIButton = {
-        $0.setTitle("1", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button1: Button = {
+        let b = Button(titleText: "1", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button2: UIButton = {
-        $0.setTitle("2", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button2: Button = {
+        let b = Button(titleText: "2", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button3: UIButton = {
-        $0.setTitle("3", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button3: Button = {
+        let b = Button(titleText: "3", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button4: UIButton = {
-        $0.setTitle("4", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button4: Button = {
+        let b = Button(titleText: "4", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button5: UIButton = {
-        $0.setTitle("5", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button5: Button = {
+        let b = Button(titleText: "5", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button6: UIButton = {
-        $0.setTitle("6", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button6: Button = {
+        let b = Button(titleText: "6", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button7: UIButton = {
-        $0.setTitle("7", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button7: Button = {
+        let b = Button(titleText: "7", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button8: UIButton = {
-        $0.setTitle("8", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button8: Button = {
+        let b = Button(titleText: "8", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var button9: UIButton = {
-        $0.setTitle("9", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var button9: Button = {
+        let b = Button(titleText: "9", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var buttonDot: UIButton = {
-        $0.setTitle(".", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .darkGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonDot: Button = {
+        let b = Button(titleText: ".", colorBack: .darkGray, type: .system)
+        return b
+    }()
     
-    private lazy var buttonAC: UIButton = {
-        $0.setTitle("AC", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-        $0.setTitleColor(.black, for: .normal)
-        $0.backgroundColor = .lightGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonAC: Button = {
+        let b = Button(titleText: "AC", colorBack: .lightGray, type: .system)
+        b.setTitleColor(.black, for: .normal)
+        return b
+    }()
     
-    private lazy var buttonChange: UIButton = {
-        $0.setTitle("+/-", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-        $0.setTitleColor(.black, for: .normal)
-        $0.backgroundColor = .lightGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonChange: Button = {
+        let b = Button(titleText: "+/-", colorBack: .lightGray, type: .system)
+        b.setTitleColor(.black, for: .normal)
+        return b
+    }()
     
-    private lazy var buttonPercent: UIButton = {
-        $0.setTitle("%", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 35)
-        $0.setTitleColor(.black, for: .normal)
-        $0.backgroundColor = .lightGray
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonPercent: Button = {
+        let b = Button(titleText: "%", colorBack: .lightGray, type: .system)
+        b.setTitleColor(.black, for: .normal)
+        return b
+    }()
     
-    private lazy var buttonDivide: UIButton = {
-        $0.setTitle("÷", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 50)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemOrange
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonDivide: Button = {
+        let b = Button(titleText: "÷", colorBack: .systemOrange, type: .system)
+        return b
+    }()
     
-    private lazy var buttonMultiply: UIButton = {
-        $0.setTitle("×", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 50)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemOrange
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonMultiply: Button = {
+        let b = Button(titleText: "×", colorBack: .systemOrange, type: .system)
+        return b
+    }()
     
+    private lazy var buttonMinus: Button = {
+        let b = Button(titleText: "–", colorBack: .systemOrange, type: .system)
+        return b
+    }()
     
-    private lazy var buttonMinus: UIButton = {
-        $0.setTitle("–", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 50)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemOrange
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonPlus: Button = {
+        let b = Button(titleText: "+", colorBack: .systemOrange, type: .system)
+        return b
+    }()
     
-    private lazy var buttonPlus: UIButton = {
-        $0.setTitle("+", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 50)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemOrange
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
-    
-    private lazy var buttonEqual: UIButton = {
-        $0.setTitle("=", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 50)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemOrange
-        $0.heightAnchor.constraint(equalToConstant: 90).isActive = true
-        $0.layer.cornerRadius = 45
-        return $0
-    }(UIButton(type: .system))
+    private lazy var buttonEqual: Button = {
+        let b = Button(titleText: "=", colorBack: .systemOrange, type: .system)
+        return b
+    }()
     
     //MARK: - Setup TextField
     

@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     
     private var isFinishedTypingNumber = true
     
+    private var calculator = CalculatorLogic()
+    
     private var displayValue: Double {
         get {
             guard let number = Double(subView.textField.text!) else {
@@ -19,7 +21,8 @@ class ViewController: UIViewController {
             return number
         }
         set {
-            subView.textField.text = String(newValue)
+            subView.textField.text = "\(newValue)"
+            if newValue == 0 {subView.textField.text = "0"}
         }
     }
     
@@ -46,36 +49,36 @@ class ViewController: UIViewController {
         return sb
     }()
     
+    
+//MARK: - Button methods
+    
     @objc func numberPressed(_ sender: UIButton) {
-        
-        if let newValue = sender.currentTitle {
-            if isFinishedTypingNumber {
-                subView.textField.text = newValue
-                isFinishedTypingNumber = false
-            } else {
-                if newValue == "." {
-                    guard !subView.textField.text!.contains(".") else {
-                        
+        if let numValue = sender.currentTitle {
+                if isFinishedTypingNumber {
+                    if numValue == "." {
+                        subView.textField.text = "0."
+                    } else {
+                        subView.textField.text = numValue
+                    }
+                    isFinishedTypingNumber = false
+                    } else {
+                        if numValue == "." && subView.textField.text!.contains(".") {
                         return
                     }
+                    subView.textField.text! += numValue
                 }
-                subView.textField.text = subView.textField.text! + newValue
             }
-        }
-        
     }
     
     @objc func calcPressed(_ sender: UIButton) {
         isFinishedTypingNumber = true
+        calculator.setNumber(displayValue)
         
         if let calcMethod = sender.currentTitle {
-            let calculator = CalculatorLogic(number: displayValue)
-            guard let result = calculator.calculate(symbol: calcMethod) else {
-                fatalError("The result of the calculation is nil.")
+            if let result = calculator.calculate(symbol: calcMethod) {
+                displayValue = result
             }
-            displayValue = result
         }
-        
     }
     
     //MARK: - Setup Constraints

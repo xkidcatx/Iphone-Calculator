@@ -14,6 +14,7 @@
 		1ABE91352812FDE20033C423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE91332812FDE20033C423 /* LaunchScreen.storyboard */; };
 		1ABE91402816BC770033C423 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE913F2816BC770033C423 /* HorizontalStackView.swift */; };
 		1ABE91432816C2A80033C423 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE91422816C2A80033C423 /* SubView.swift */; };
+		1AC137E0282B05F4008246CA /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC137DF282B05F4008246CA /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1ABE91362812FDE20033C423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ABE913F2816BC770033C423 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		1ABE91422816C2A80033C423 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		1AC137DF282B05F4008246CA /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				1ABE91422816C2A80033C423 /* SubView.swift */,
 				1ABE913F2816BC770033C423 /* HorizontalStackView.swift */,
+				1AC137DF282B05F4008246CA /* ButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				1ABE912D2812FDE00033C423 /* ViewController.swift in Sources */,
 				1ABE91292812FDE00033C423 /* AppDelegate.swift in Sources */,
+				1AC137E0282B05F4008246CA /* ButtonView.swift in Sources */,
 				1A1E7F29281851CA006A7AB7 /* CalculatorLogic.swift in Sources */,
 				1ABE91432816C2A80033C423 /* SubView.swift in Sources */,
 				1ABE91402816BC770033C423 /* HorizontalStackView.swift in Sources */,
